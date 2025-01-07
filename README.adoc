@@ -8,8 +8,8 @@
 
 *Belegarbeit & Präsentation*:
 
-- link:Belegarbeit.pdf[Belegarbeit]
-- link:Präsentation.pptx[Präsentation]
+- link:Beleg-03_Belegarbeit.pdf[Belegarbeit (.pdf)]
+- link:Beleg-03_Präsentation.pptx[Präsentation (.pptx)]
 
 {empty} +
 
