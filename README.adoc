@@ -8,8 +8,8 @@
 
 *Belegarbeit & Präsentation*:
 
-- link:Beleg-03_Belegarbeit.pdf[Belegarbeit (.pdf)]
-- link:Beleg-03_Präsentation.pptx[Präsentation (.pptx)]
+- link:03-Refactoring-und-technische-Schulden-in-agilen-Projekten.pdf[Belegarbeit (.pdf)]
+- link:03-Refactoring-und-technische-Schulden-in-agilen-Projekten_Präsentation.pdf[Präsentation (.pdf)]
 
 {empty} +
 
