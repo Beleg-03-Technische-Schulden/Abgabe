@@ -1,17 +1,18 @@
 # Refactoring und technische Schulden in agilen Projekten
 
-*Autoren*: Felix Herrling, Oliver Lindemann, Tim Dietrich
+Belegarbeit im Rahmen des Moduls: Software Engineering (link:https://wse-research.org/team/anbo[Prof. Dr. Andreas Both], Wintersemester 2024/2025) an der link:https://www.htwk-leipzig.de/[HTWK Leipzig]
 
-*Modul*: Software Engineering (Prof. Dr. Andreas Both, Wintersemester 2024/2025) an der HTWK Leipzig
 
-{empty} +
+## Autoren: 
+- Felix Herrling
+- Oliver Lindemann
+- Tim Dietrich
 
-*Belegarbeit & Präsentation*:
+## Dateien:
 
 - link:03-Refactoring-und-technische-Schulden-in-agilen-Projekten.pdf[Belegarbeit (.pdf)]
+- link:LaTeX/03-Refactoring-und-technische-Schulden-in-agilen-Projekten.tex[LaTeX-Quelldatei der Belegarbeit (.tex)]
 - link:03-Refactoring-und-technische-Schulden-in-agilen-Projekten_Präsentation.pdf[Präsentation (.pdf)]
-
-{empty} +
 
 ## Abstract
 Die vorliegende Arbeit untersucht das Konzept der technischen Schulden, deren Management in agilen Softwareentwicklungsprojekten und deren Rückzahlung durch Refactoring. Ausgehend von Ward Cunninghams Definition werden verschiedene Arten technischer Schulden kategorisiert und deren spezifische Eigenschaften wie Sichtbarkeit, Wert und Verzinsung analysiert. Die verschiedenen Möglichkeiten der Entstehung technischer Schulden werden mit Hilfe des “Technical Debt Quadrants” von Martin Fowler erörtert. Ein Schwerpunkt liegt auf dem technischen Schuldenmanagement (TSM) mit seinen Kernaktivitäten wie Identifizierung, Messung, Priorisierung und Rückzahlung. Hinzu kommen die Dokumentation und Kommunikation, bei denen deutlich wird, dass ein effektives Management technischer Schulden sowohl technische als auch organisatorische Maßnahmen erfordert. Aufbauend auf den Erkenntnissen zum Management technischer Schulden wird Refactoring als zentrale Methode zur Verbesserung der Codequalität und zum Abbau bzw. zur Prävention technischer Schulden untersucht. Die Arbeit betrachtet dabei sowohl theoretische Grundlagen und Best Practices des Refactorings als auch deren praktische Anwendung und Integration in agile Entwicklungsprozesse, um eine nachhaltige Softwareentwicklung zu gewährleisten.
