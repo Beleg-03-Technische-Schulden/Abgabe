@@ -1,0 +1,49 @@
+= Example for Code Smell Refactoring
+
+Encapsulate Variable
+
+[source,java]
+----
+class Student {
+    public String StudentName;
+}
+----
+
+wird zu
+
+[source,java]
+----
+class Student {
+    private String studentName;
+
+    public String getName() {
+        return this.studentName;
+    }
+
+    public void setName(String name) {
+        this.studentName = name;
+    }
+}
+----
+
+Decompose Conditional
+
+[source,java]
+----
+if (date.isBefore(plan.summerBreakStart) && date.isAfter(plan.summerBreakEnd)) {
+    ticketFee = dayCount * plan.summerBreakFee + plan.regularCharge;
+} else {
+    ticketFee = dayCount * plan.semesterFee;
+}
+----
+
+wird zu
+
+[source,java]
+----
+if (summerBreak()) {
+    ticketFee = summerBreakCharge();
+} else {
+    ticketFee = regularCharge();
+}
+----

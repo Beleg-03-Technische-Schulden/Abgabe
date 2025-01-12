@@ -1,0 +1,152 @@
+= Timeslot Class Implementation
+
+[source,java]
+----
+import java.time.Duration;
+import java.time.LocalDateTime;
+
+public class Timeslot {
+
+    public LocalDateTime start;
+    public LocalDateTime end;
+
+    public Timeslot(LocalDateTime start, LocalDateTime end) {
+        this.start = start;
+        this.end = end;
+    }
+
+    public Duration getDuration() {
+        return Duration.between(start, end);
+    }
+}
+----
+
+== Edge-Case #1: Null-Check
+
+[source,java]
+----
+@Test(expected = IllegalArgumentException.class)
+public void testNullStartzeit() {
+    new Timeslot(null, LocalDateTime.now());
+}
+
+@Test(expected = IllegalArgumentException.class)
+public void testNullEndzeit() {
+    new Timeslot(LocalDateTime.now(), null);
+}
+----
+
+== Updated Implementation with Null-Validation
+
+[source,java]
+----
+import java.time.Duration;
+import java.time.LocalDateTime;
+
+public class Timeslot {
+
+    public LocalDateTime start;
+    public LocalDateTime end;
+
+    public Timeslot(LocalDateTime start, LocalDateTime end) {
+        if (start == null || end == null) {
+            throw new IllegalArgumentException("Start- und Endzeitpunkt dürfen nicht null sein.");
+        }
+
+        this.start = start;
+        this.end = end;
+    }
+
+    public Duration getDuration() {
+        return Duration.between(start, end);
+    }
+}
+----
+
+== Edge-Case #2: Time-Validation
+
+[source,java]
+----
+@Test(expected = IllegalArgumentException.class)
+public void testStartzeitNachEndzeit() {
+    LocalDateTime start = LocalDateTime.now();
+    LocalDateTime end = start.minusMinutes(5);
+
+    new Timeslot(start, end);
+}
+----
+
+== Updated Implementation with Time-Validation
+
+[source,java]
+----
+import java.time.Duration;
+import java.time.LocalDateTime;
+
+public class Timeslot {
+
+    public LocalDateTime start;
+    public LocalDateTime end;
+
+    public Timeslot(LocalDateTime start, LocalDateTime end) {
+        if (start == null || end == null) {
+            throw new IllegalArgumentException("Start- und Endzeitpunkt dürfen nicht null sein.");
+        }
+
+        if (end.isBefore(start)) {
+            throw new IllegalArgumentException("Endzeitpunkt muss nach dem Startzeitpunkt sein");
+        }
+
+        this.start = start;
+        this.end = end;
+    }
+
+    public Duration getDuration() {
+        return Duration.between(start, end);
+    }
+}
+----
+
+== Edge-Case #3: Equal Start- and End-Time
+
+[source,java]
+----
+@Test(expected = IllegalArgumentException.class)
+public void testStartzeitGleichEndzeit() {
+    LocalDateTime start = LocalDateTime.now();
+    LocalDateTime end = start;
+
+    new Timeslot(start, end);
+}
+----
+
+== Updated Implementation
+
+[source,java]
+----
+import java.time.Duration;
+import java.time.LocalDateTime;
+
+public class Timeslot {
+
+    public LocalDateTime start;
+    public LocalDateTime end;
+
+    public Timeslot(LocalDateTime start, LocalDateTime end) {
+        if (start == null || end == null) {
+            throw new IllegalArgumentException("Start- und Endzeitpunkt dürfen nicht null sein.");
+        }
+
+        if (!end.isAfter(start)) {
+            throw new IllegalArgumentException("Endzeitpunkt muss nach dem Startzeitpunkt sein");
+        }
+
+        this.start = start;
+        this.end = end;
+    }
+
+    public Duration getDuration() {
+        return Duration.between(start, end);
+    }
+}
+----
