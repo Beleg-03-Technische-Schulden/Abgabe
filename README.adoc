@@ -9,6 +9,7 @@
 *Belegarbeit & Präsentation*:
 
 - link:03-Refactoring-und-technische-Schulden-in-agilen-Projekten.pdf[Belegarbeit (.pdf)]
+- link:LaTeX/03-Refactoring-und-technische-Schulden-in-agilen-Projekten.tex[LaTeX-Quelldatei der Belegarbeit (.tex)]
 - link:03-Refactoring-und-technische-Schulden-in-agilen-Projekten_Präsentation.pdf[Präsentation (.pdf)]
 
 {empty} +
