@@ -2,7 +2,7 @@
 
 *Autoren*: Felix Herrling, Oliver Lindemann, Tim Dietrich
 
-*Modul*: Software Engineering (Prof. Dr. Andreas Both, Wintersemester 2024/2025) an der HTWK Leipzig
+*Modul*: Software Engineering (link:https://wse-research.org/team/anbo[Prof. Dr. Andreas Both], Wintersemester 2024/2025) an der link:https://www.htwk-leipzig.de/[HTWK Leipzig]
 
 {empty} +
 
