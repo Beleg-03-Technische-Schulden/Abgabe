@@ -1,0 +1,25 @@
+name: Paper PDF
+run-name: Build PDF from LaTeX source
+on: [push]
+jobs:
+  Build-PDF:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Compile PDF with Makefile in `LaTeX` directory
+        uses: xu-cheng/texlive-action@v2
+        with:
+          scheme: full
+          run: |
+            apk add make
+            cd ./LaTeX
+            make all
+      - name: Copy generated PDF to repository root
+        run: cp ./LaTeX/03-Refactoring-und-technische-Schulden-in-agilen-Projekten.pdf .
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9.1.4
+        with:
+          add: "./03-Refactoring-und-technische-Schulden-in-agilen-Projekten.pdf"
+          default_author: github_actions
+          message: Add PDF built with GitHub Actions
